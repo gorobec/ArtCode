@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>week2.day1.inheritance</OriginalElement>
+  <nodes>
+    <node x="831.0" y="456.0">week2.day1.inheritance.Junior</node>
+    <node x="0.0" y="264.0">week2.day1.inheritance.QA</node>
+    <node x="779.6826388888888" y="252.0">week2.day1.inheritance.Coder</node>
+    <node x="491.71527777777777" y="597.0">week2.day1.inheritance.TestCompany</node>
+    <node x="514.0" y="456.0">week2.day1.inheritance.Middle</node>
+    <node x="240.0" y="276.0">week2.day1.inheritance.Manager</node>
+    <node x="318.75" y="0.0">week2.day1.inheritance.Employee</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="week2.day1.inheritance.TestCompany" target="week2.day1.inheritance.Middle">
+      <point x="15.0" y="-28.0" />
+      <point x="596.7152777777778" y="557.0" />
+      <point x="662.5" y="557.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="week2.day1.inheritance.TestCompany" target="week2.day1.inheritance.QA">
+      <point x="-75.0" y="-28.0" />
+      <point x="506.71527777777777" y="577.0" />
+      <point x="110.0" y="577.0" />
+      <point x="0.0" y="65.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.Coder" target="week2.day1.inheritance.Employee">
+      <point x="1.1368683772161603E-13" y="-77.0" />
+      <point x="956.182638888889" y="232.0" />
+      <point x="518.5500000000001" y="232.0" />
+      <point x="88.80000000000007" y="101.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.TestCompany" target="week2.day1.inheritance.Coder">
+      <point x="75.0" y="-28.0" />
+      <point x="656.7152777777778" y="577.0" />
+      <point x="1135.5" y="577.0" />
+      <point x="1135.5" y="431.0" />
+      <point x="1073.8493055555555" y="431.0" />
+      <point x="117.66666666666663" y="77.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.Junior" target="week2.day1.inheritance.Coder">
+      <point x="0.0" y="-40.5" />
+      <point x="978.0" y="431.0" />
+      <point x="956.1826388888888" y="431.0" />
+      <point x="0.0" y="77.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.TestCompany" target="week2.day1.inheritance.Manager">
+      <point x="-45.0" y="-28.0" />
+      <point x="536.7152777777778" y="567.0" />
+      <point x="366.5" y="567.0" />
+      <point x="0.0" y="53.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.QA" target="week2.day1.inheritance.Employee">
+      <point x="0.0" y="-65.0" />
+      <point x="110.0" y="222.0" />
+      <point x="340.95" y="222.0" />
+      <point x="-88.80000000000001" y="101.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.Manager" target="week2.day1.inheritance.Employee">
+      <point x="-63.25" y="-53.0" />
+      <point x="303.25" y="232.0" />
+      <point x="385.35" y="232.0" />
+      <point x="-44.39999999999998" y="101.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.TestCompany" target="week2.day1.inheritance.Employee">
+      <point x="-15.0" y="-28.0" />
+      <point x="566.7152777777778" y="557.0" />
+      <point x="503.5" y="557.0" />
+      <point x="503.5" y="232.0" />
+      <point x="474.15000000000003" y="232.0" />
+      <point x="44.400000000000034" y="101.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.Middle" target="week2.day1.inheritance.Coder">
+      <point x="0.0" y="-40.5" />
+      <point x="662.5" y="431.0" />
+      <point x="838.5159722222222" y="431.0" />
+      <point x="-117.66666666666663" y="77.0" />
+    </edge>
+    <edge source="week2.day1.inheritance.TestCompany" target="week2.day1.inheritance.Junior">
+      <point x="45.0" y="-28.0" />
+      <point x="626.7152777777778" y="567.0" />
+      <point x="978.0" y="567.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5616641901931649" x="568.0" y="326.5" />
+  <SelectedNodes>
+    <node>week2.day1.inheritance.Employee</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

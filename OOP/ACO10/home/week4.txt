@@ -1,0 +1,77 @@
+Theory:
+
+    1. final -> variable, field, method, class
+       static -> field, method (lifecycle, scope)
+
+    2.  Object methods
+        equals, clone, toString
+        Must know how to override that methods
+           book Effective Java
+
+        Clone
+        http://habrahabr.ru/post/246993/
+        http://echuprina.blogspot.com/2012/02/cloneable.html
+
+    3. SOLID learn by heart
+
+    4. See patterns Strategy, Observer, FactoryMethod, Decorator
+        book Head First Design Patterns
+
+    5. Recursion - basi algorithms (factorial, pow, palidrome, fibbonachi numbers)
+
+       Recursion Visualization
+        http://visualgo.net/recursion.html
+        https://www.cs.usfca.edu/~galles/visualization/RecReverse.html
+        https://www.cs.usfca.edu/~galles/visualization/RecFact.html
+
+    6. See interface java.util.List
+
+		     Data Structures based on:
+        Nodes
+               https://www.cs.usfca.edu/~galles/visualization/StackLL.html
+               https://www.cs.usfca.edu/~galles/visualization/QueueLL.html
+
+	    Array
+               https://www.cs.usfca.edu/~galles/visualization/StackArray.html
+               https://www.cs.usfca.edu/~galles/visualization/QueueArray.html
+
+
+           More exaples structures on Nodes
+           http://visualgo.net/list.html
+
+	    Define advantages and disadvantages of linked and array structures
+
+	 7. Generics:
+	    https://www.youtube.com/watch?v=MniNZsyjH9E
+	    https://www.youtube.com/watch?v=pezRhckJbFE
+
+	 8. Iterator
+	    https://www.youtube.com/watch?v=2DuwRrmZwDE
+	    https://www.youtube.com/watch?v=VKIzUuMdmag
+
+Practice:
+
+   1. Do minimum 10 tasks from http://codingbat.com/java/Recursion-1
+     * or if you are want to be a hero implement all!
+
+   2. Finish our LinkedList
+
+   3. Implement own simple ArrayStack, LinkedStack, ArrayQueue, LinkedQueue
+
+   4*. Upgrade your LinkedQueue
+     Переопределяем equals, toString, clone для структуры
+        - добавить элемент в хвост
+        - добавить элемент в голову
+        - забрать элемент с головы
+        - забрать элемент с хвоста
+        - Поиск элемента по значению (сравнение через equals)
+       - Поменять местами первый и последний элементы
+        - Поменять местами наибольший и наименьший элементы, в случае если реализован интерфейс Comparable
+        - Отсортировать список, в случае если реализован интерфейс Comparable
+        - Удалить повторяющиеся элементы из списка, в случае если реализован интерфейс Comparable
+        * Перестроить элементы в обратном порядке
+        * Реализовать итератор
+
+    5!!! Don't forget about your project!!!!
+
+    Happy New year!!! And Marry XMas!!!

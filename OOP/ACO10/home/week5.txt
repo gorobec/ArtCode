@@ -1,0 +1,52 @@
+1.   Algorithm complexity - big O notation
+     By Time      By Data
+
+       Algorithms              Algorithm complexity
+           search              Time           Data
+               linear search - O(N)            1
+               binary search - O(logN)         1
+           sort
+               bubble sort    |
+               insertion sort |} O(N^2)        1
+               selection sort |
+
+     Generics in Java
+
+     Exception
+        Hierarchy
+        'throw'
+        Checked(throws or try-catch) and Unchecked
+        http://kostin.ws/java/java-exceptions.html
+        http://habrahabr.ru/company/golovachcourses/blog/223821/
+        http://habrahabr.ru/company/golovachcourses/blog/225585/
+
+2. Java I/O.
+    Abstract classes InputStream/OutputStream
+    https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html
+    https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html
+    http://sernam.ru/book_java.php?id=56
+
+    http://habrahabr.ru/post/178405/
+
+    Class File
+    https://docs.oracle.com/javase/7/docs/api/java/io/File.html
+    http://developer.alexanderklimov.ru/android/java/file.php
+
+    TODO saving your library in file
+
+3. Add to previous homework(data_structures)
+    - generics
+    - exception
+
+
+4. CommandLine https://www.codecademy.com/learn/learn-the-command-line !!!
+5. Git https://www.codecademy.com/learn/learn-git !!!
+
+
+
+* - Additional
+
+        	http://habrahabr.ru/post/127864/
+        	http://habrahabr.ru/post/128269/
+        	http://habrahabr.ru/post/128017/
+        	http://habrahabr.ru/post/129037/
