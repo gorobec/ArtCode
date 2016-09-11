@@ -15,6 +15,6 @@ public class _12MethodsIntro {
         ArrayUtils.printArray(array);
 
         ArrayUtils.printArray(ArrayUtils.createRandomArray(15, 25, 300));
-
+        System.out.println(Arrays.toString(array));
     }
 }
