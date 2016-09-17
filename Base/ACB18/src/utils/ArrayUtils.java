@@ -85,7 +85,7 @@ public class ArrayUtils {
         }
         return array;
     }
-
+    @Deprecated
     public static String arrayToString(int[] array){
 
         if(array == null) return null;
@@ -99,6 +99,27 @@ public class ArrayUtils {
             arrayAsString += array[array.length - 1];
 
         return arrayAsString + "]";
+    }
+
+    public static String arrayToStringUsingBuilder(int[] array){
+
+        if(array == null) return null;
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("[");
+
+
+        for (int i = 0; i < array.length - 1; i++) {
+            sb.append(array[i]).append(", ");
+        }
+
+        if(array.length > 0)
+            sb.append(array[array.length - 1]);
+
+         sb.append("]");
+
+        return sb.toString();
     }
 
 
