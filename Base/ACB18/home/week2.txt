@@ -63,7 +63,7 @@
 
 
 3. Do First all tasks from below links !!! You can use IDEA for better understanding
-               	http://codingbat.com/java/Array-2
+               	http://codingbat.com/java/Array-1
                	http://codingbat.com/java/String-1
 
 	           (Как пользоваться сайтом
