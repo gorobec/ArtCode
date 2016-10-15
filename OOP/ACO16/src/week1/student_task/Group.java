@@ -32,8 +32,16 @@ public class Group {
         return students;
     }
 
+    public void sort(){
+        Arrays.sort(students);
+    }
+
     public boolean addStudent(Student student){
         if (studentsCount == students.length || student == null) return false;
+
+        for (int i = 0; i < studentsCount; i++) {
+            if(student.equals(students[i])) return false;
+        }
 
         students[studentsCount] = student;
         studentsCount++;

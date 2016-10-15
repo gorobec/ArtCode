@@ -27,16 +27,22 @@ public class TestStudent {
         group.addStudent(student5);
         group.addStudent(student7);
 
+
+
         group2.addStudent(student2);
         group2.addStudent(student4);
         group2.addStudent(student6);
         group2.addStudent(student8);
 
-        artCode.addGroup(group);
+       /* artCode.addGroup(group);
         artCode.addGroup(group2);
 
         artCode.showGroups();
-        artCode.showStudents();
+        artCode.showStudents();*/
+
+        System.out.println(group);
+        group.sort();
+        System.out.println(group);
 
 
     }
