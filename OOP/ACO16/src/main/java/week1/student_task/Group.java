@@ -1,6 +1,7 @@
 package week1.student_task;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Created by gorobec on 09.10.16.
@@ -34,6 +35,10 @@ public class Group {
 
     public void sort(){
         Arrays.sort(students);
+    }
+    public void sort(Comparator comparator){
+        Arrays.sort(students, comparator);
+
     }
 
     public boolean addStudent(Student student){

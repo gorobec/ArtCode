@@ -43,6 +43,8 @@ public class TestStudent {
         System.out.println(group);
         group.sort();
         System.out.println(group);
+        group.sort(new AverageMarkComparator());
+        System.out.println(group);
 
 
     }
