@@ -1,4 +1,4 @@
-package week3.singletone;
+package week3.singleton;
 
 /**
  * Created by gorobec on 23.10.16.
