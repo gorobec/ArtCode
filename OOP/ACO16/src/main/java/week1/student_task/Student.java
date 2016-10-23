@@ -38,6 +38,11 @@ public class Student implements Comparable<Student>{
 
     }
     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString(){
         return String.format(" name - %s, surname - %s, average mark - %.2f", name, surname, averageMark);

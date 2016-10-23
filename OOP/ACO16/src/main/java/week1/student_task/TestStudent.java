@@ -20,6 +20,8 @@ public class TestStudent {
        Group group = new Group("ACO16", 4);
        Group group2 = new Group("ACB18", 4);
 
+
+
         University artCode = new University("ArtCode", 5);
 
         group.addStudent(student);
@@ -40,10 +42,16 @@ public class TestStudent {
         artCode.showGroups();
         artCode.showStudents();*/
 
-        System.out.println(group);
+       /* System.out.println(group);
         group.sort();
         System.out.println(group);
         group.sort(new AverageMarkComparator());
+        System.out.println(group);*/
+
+        System.out.println(group);
+
+        student.setName("Johny");
+
         System.out.println(group);
 
 
