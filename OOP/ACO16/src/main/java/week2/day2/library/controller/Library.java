@@ -176,5 +176,11 @@ public class Library {
 
     }
 
+    public void setReaderDao(ReaderDao readerDao) {
+        this.readerDao = readerDao;
+    }
 
+    public void setIssueDao(IssueDao issueDao) {
+        this.issueDao = issueDao;
+    }
 }
