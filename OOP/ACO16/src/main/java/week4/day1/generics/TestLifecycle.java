@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class TestLifecycle {
     public static void main(String[] args) {
-        _02LifecycleOfGenerics<Object> lc = new _02LifecycleOfGenerics();
+        _02LifecycleOfGenerics<Object> lc = new _02LifecycleOfGenerics<>();
 
         List<String> list = new ArrayList<>();
         list.add("1");

@@ -54,6 +54,11 @@ public abstract class ListTest {
 
     }
 
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void testGetWhenWrongIndex(){
+        myList.get(myList.size());
+    }
+
 
 
 }

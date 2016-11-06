@@ -56,9 +56,13 @@ public class MyArrayList implements MyList{
     }
 
     public Object get(int index) {
-
+        checkIndex(index);
 
         return elementData[index];
+    }
+
+    private void checkIndex(int index) {
+        if(index < 0 || index >= size) throw new IndexOutOfBoundsException();
     }
 
     @Override

@@ -66,8 +66,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     private void checkIndex(int index) {
-//        if(index < 0 || index >= size) throw new IndexOutOfBoundsException();
-        if(index < 0 || index >= size) System.exit(-5);
+        if(index < 0 || index >= size) throw new IndexOutOfBoundsException();
     }
 
     @Override

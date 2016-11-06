@@ -6,25 +6,24 @@ import java.util.List;
 /**
  * Created by gorobec on 29.10.16.
  */
+
+
 public class _01RawType {
     public static void main(String[] args) {
-        List<Object> rawType = new ArrayList();
+
+
+        List rawType = new ArrayList();
         List<String> list = new ArrayList<>();
 
-        rawType.add(1);
-        rawType.add("1");
-
-//        String o = (String)rawType.get(0);
-
-        list.add("!");
-
-//        rawType = list;
+        rawType = list;
 
         rawType.add(1);
+        rawType.add("2");
 
-        String s = list.get(1);
 
+        String s = list.get(0);
 
+        System.out.println(s);
 
     }
 }
