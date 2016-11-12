@@ -1,11 +1,12 @@
 package week1.student_task;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by gorobec on 09.10.16.
  */
-public class University {
+public class University implements Serializable{
     private String name;
     private Group[] groups;
     private int groupCount;

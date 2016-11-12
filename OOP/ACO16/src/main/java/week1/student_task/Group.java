@@ -1,12 +1,13 @@
 package week1.student_task;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Comparator;
 
 /**
  * Created by gorobec on 09.10.16.
  */
-public class Group {
+public class Group implements Serializable{
 
     private String name;
     private Student[] students;

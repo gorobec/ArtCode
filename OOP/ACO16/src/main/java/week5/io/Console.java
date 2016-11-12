@@ -11,14 +11,12 @@ import java.util.Scanner;
 public class Console {
 
     private static final String LOCATION = "/home/gorobec/java";
+
     public static void main(String[] args) {
 
         File file = new File(LOCATION);
 
         Scanner sc = new Scanner(System.in);
-
-
-
 
 
         while (true) {

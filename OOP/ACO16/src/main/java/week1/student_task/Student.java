@@ -1,9 +1,11 @@
 package week1.student_task;
 
+import java.io.Serializable;
+
 /**
  * Created by gorobec on 08.10.16.
  */
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student>, Serializable{
 
     private String name;
     private String surname;
