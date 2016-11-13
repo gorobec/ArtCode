@@ -9,7 +9,7 @@ public class Student implements Comparable<Student>, Serializable{
 
     private String name;
     private String surname;
-    private double averageMark;
+    private transient double averageMark;
 
 //    public Student(){}
 

@@ -122,23 +122,27 @@ public class MyLinkedList<T> implements MyList<T> {
         private T value;
 
 
-       public Node() {
+       private Node() {
        }
 
-       Node(Node<T> next, Node<T> previous, T value) {
+       private Node(Node<T> next, Node<T> previous, T value) {
             this.next = next;
             this.previous = previous;
             this.value = value;
         }
 
-        Node(T value) {
+       private Node(T value) {
             this.value = value;
         }
 
-         Node(Node<T> previous, T value) {
+       private Node(Node<T> previous, T value) {
             this.previous = previous;
             this.value = value;
-        }
+       }
+       private Node(T value, Node<T> next){
+           this.value = value;
+           this.next = next;
+       }
     }
 
     private class MyLinkedListIterator implements Iterator<T> {
