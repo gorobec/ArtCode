@@ -34,11 +34,11 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
     public boolean contains(Object o) {
         if(o == null) throw new NullPointerException("o == null");
 
-        if(comparator != null) return findWithComparator(o);
-        else return findWithComparable(o);
+        if(comparator != null) return getNodeWithComparator(o) != null;
+        else return getNodeWithComparable(o) != null;
     }
 
-    private boolean findWithComparable(Object o) {
+    private Node<E> getNodeWithComparable(Object o) {
         @SuppressWarnings(value = "unchecked")
         Comparable<? super E> comparable = (Comparable<? super E>) o;
 
@@ -51,14 +51,14 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
             } else if(comparable.compareTo(iterator.value) < 0){
                 iterator = iterator.leftChild;
             } else {
-                return true;
+                return iterator;
             }
         }
 
-        return false;
+        return null;
     }
 
-    private boolean findWithComparator(Object o) {
+    private Node<E> getNodeWithComparator(Object o) {
         @SuppressWarnings(value = "unchecked")
         E forCompare = (E) o;
 
@@ -70,11 +70,11 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
             } else if (comparator.compare(forCompare, iterator.value) < 0){
                 iterator = iterator.leftChild;
             } else {
-                return true;
+                return iterator;
             }
         }
 
-        return false;
+        return null;
     }
 
     @Override
@@ -156,7 +156,97 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
 
     @Override
     public boolean remove(Object o) {
-        return false;
+
+        if(o == null) throw new NullPointerException("o can't be null");
+
+        Node<E> forRemove;
+
+        if(comparator != null) {
+            forRemove = getNodeWithComparator(o);
+        } else {
+            forRemove = getNodeWithComparable(o);
+        }
+
+        if(forRemove == null) return false;
+
+        if(forRemove.rightChild == null && forRemove.leftChild == null) {
+            deleteIfHasNotChildren(forRemove);
+        } else if(forRemove.rightChild == null){
+            deleteIfHasOnlyLeftChild(forRemove);
+        } else if(forRemove.leftChild == null){
+            deleteIfHasOnlyRightChild(forRemove);
+        } else{
+            deleteIfHasBothChildren(forRemove);
+        }
+
+        size--;
+        return true;
+    }
+
+    private void deleteIfHasBothChildren(Node<E> forRemove) {
+        Node<E> successor = findSuccessor(forRemove);
+        if(forRemove == root){
+            root = successor;
+            root.parent = null;
+            root.leftChild = forRemove.leftChild;
+            Node<E> successorRightChild = successor.rightChild;
+            Node<E> successorParent = successor.parent;
+            root.rightChild = forRemove.rightChild;
+            successorParent.leftChild = successorRightChild;
+            successorRightChild.parent = root.rightChild;
+        } else if (isRightChild(forRemove)){
+
+        } else if (!isRightChild(forRemove)) {
+
+        } else {
+
+        }
+
+    }
+
+    private boolean isRightChild(Node<E> forRemove) {
+        return forRemove == forRemove.parent.rightChild;
+    }
+
+    private Node<E> findSuccessor(Node<E> forRemove) {
+
+        return getFirstNode(forRemove.rightChild);
+    }
+
+    private void deleteIfHasOnlyRightChild(Node<E> forRemove) {
+        if(forRemove == root){
+            root = forRemove.rightChild;
+            forRemove.rightChild.parent = null;
+        }else if(forRemove == forRemove.parent.leftChild){
+            forRemove.rightChild.parent = forRemove.parent;
+            forRemove.parent.leftChild = forRemove.rightChild;
+        }else {
+            forRemove.rightChild.parent = forRemove.parent;
+            forRemove.parent.rightChild = forRemove.rightChild;
+        }
+    }
+
+    private void deleteIfHasOnlyLeftChild(Node<E> forRemove) {
+        if(forRemove == root){
+            root = forRemove.leftChild;
+            forRemove.leftChild.parent = null;
+        } else if(forRemove == forRemove.parent.leftChild){
+            forRemove.leftChild.parent = forRemove.parent;
+            forRemove.parent.leftChild = forRemove.leftChild;
+        } else {
+            forRemove.leftChild.parent = forRemove.parent;
+            forRemove.parent.rightChild = forRemove.leftChild;
+        }
+    }
+
+    private void deleteIfHasNotChildren(Node<E> forRemove) {
+        if (forRemove == root) {
+            root = null;
+        } else if (forRemove == forRemove.parent.leftChild) {
+            forRemove.parent.leftChild = null;
+        } else {
+            forRemove.parent.rightChild = null;
+        }
     }
 
     @Override
@@ -206,10 +296,10 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
 
     @Override
     public E first() {
-        return getFirstNode().value;
+        return getFirstNode(root).value;
     }
 
-    private Node<E> getFirstNode(){
+    private Node<E> getFirstNode( Node<E> root){
         if(isEmpty()) throw new NoSuchElementException("BST is empty");
 
         Node<E> iterator = root;
@@ -274,7 +364,7 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
         Node<E> iterator;
 
         MyBstIterator() {
-            iterator = new Node<>(getFirstNode());
+            iterator = new Node<>(getFirstNode(root));
         }
 
         @Override
