@@ -1,4 +1,4 @@
-package data_structures;
+package data_structures.set;
 
 /**
  * Created by gorobec on 13.11.16.

@@ -1,5 +1,7 @@
 package data_structures;
 
+import data_structures.set.MyBinarySearchTree;
+
 /**
  * Created by gorobec on 13.11.16.
  */

@@ -1,5 +1,6 @@
 package data_structures;
 
+import data_structures.set.SortedSet;
 import org.junit.Before;
 import org.junit.Test;
 

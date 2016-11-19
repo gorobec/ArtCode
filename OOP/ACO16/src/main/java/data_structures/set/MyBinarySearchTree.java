@@ -1,4 +1,4 @@
-package data_structures;
+package data_structures.set;
 
 import java.util.Comparator;
 import java.util.Iterator;
@@ -11,12 +11,12 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
 
     private Node<E> root;
     private int size;
-    private Comparator<? extends E> comparator;
+    private Comparator<? super E> comparator;
 
     public MyBinarySearchTree() {
     }
 
-    public MyBinarySearchTree(Comparator<? extends E> comparator) {
+    public MyBinarySearchTree(Comparator<? super E> comparator) {
         this.comparator = comparator;
     }
 
@@ -32,13 +32,13 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
 
     @Override
     public boolean contains(Object o) {
+        if(o == null) throw new NullPointerException("o == null");
 
         if(comparator != null) return findWithComparator(o);
         else return findWithComparable(o);
     }
 
     private boolean findWithComparable(Object o) {
-        if(o == null) throw new NullPointerException("o == null");
         @SuppressWarnings(value = "unchecked")
         Comparable<? super E> comparable = (Comparable<? super E>) o;
 
@@ -59,6 +59,21 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
     }
 
     private boolean findWithComparator(Object o) {
+        @SuppressWarnings(value = "unchecked")
+        E forCompare = (E) o;
+
+        Node<E> iterator = root;
+
+        while (iterator != null) {
+            if(comparator.compare(forCompare, iterator.value) > 0){
+                iterator = iterator.rightChild;
+            } else if (comparator.compare(forCompare, iterator.value) < 0){
+                iterator = iterator.leftChild;
+            } else {
+                return true;
+            }
+        }
+
         return false;
     }
 
@@ -113,7 +128,30 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
     }
 
     private boolean addWithComparator(E o) {
-        return false;
+        if(o == null) throw new NullPointerException("o == null");
+
+        Node<E> iterator = root;
+        Node<E> parent;
+
+        do {
+            parent = iterator;
+            if(comparator.compare(o, iterator.value) > 0){
+                iterator = iterator.rightChild;
+            } else if(comparator.compare(o, iterator.value) < 0){
+                iterator = iterator.leftChild;
+            } else {
+                return false;
+            }
+        } while (iterator != null);
+
+        if(comparator.compare(o, parent.value) > 0){
+            parent.rightChild = new Node<>(parent, o);
+        } else {
+            parent.leftChild = new Node<>(parent, o);
+
+        }
+
+        return true;
     }
 
     @Override
@@ -168,6 +206,10 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
 
     @Override
     public E first() {
+        return getFirstNode().value;
+    }
+
+    private Node<E> getFirstNode(){
         if(isEmpty()) throw new NoSuchElementException("BST is empty");
 
         Node<E> iterator = root;
@@ -175,7 +217,7 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
         while (iterator.leftChild != null){
             iterator = iterator.leftChild;
         }
-        return iterator.value;
+        return iterator;
     }
 
     /**
@@ -201,8 +243,11 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new MyBstIterator();
     }
+
+
+
 
     private static class Node<E> {
         private Node<E> parent;
@@ -216,6 +261,30 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
         public Node(Node<E> parent, E value) {
             this.parent = parent;
             this.value = value;
+        }
+
+        public Node(Node<E> parent) {
+            this.parent = parent;
+        }
+    }
+
+    private class MyBstIterator implements Iterator<E> {
+
+
+        Node<E> iterator;
+
+        MyBstIterator() {
+            iterator = new Node<>(getFirstNode());
+        }
+
+        @Override
+        public boolean hasNext() {
+            return iterator.parent != null || iterator.rightChild != null;
+        }
+
+        @Override
+        public E next() {
+            return null;
         }
     }
 }
