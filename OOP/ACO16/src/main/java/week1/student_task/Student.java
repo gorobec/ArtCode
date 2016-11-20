@@ -51,32 +51,22 @@ public class Student implements Comparable<Student>, Serializable{
     }
 
     @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (surname != null ? surname.hashCode() : 0);
-        temp = Double.doubleToLongBits(averageMark);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        return result;
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
         Student student = (Student) o;
 
+        if (!name.equals(student.name)) return false;
+        return surname.equals(student.surname);
 
-        if(name != null){
-            boolean answer =  name.equals(student.name);
-            if(!answer) return false;
-        }
+    }
 
-
-        return surname != null ? surname.equals(student.surname) : student.surname == null;
-
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + surname.hashCode();
+        return result;
     }
 
     @Override

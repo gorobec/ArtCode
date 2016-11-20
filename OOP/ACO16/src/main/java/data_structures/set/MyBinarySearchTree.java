@@ -374,6 +374,13 @@ public class MyBinarySearchTree<E> implements NavigableSet<E>{
 
         @Override
         public E next() {
+            if(iterator.parent != null && iterator == iterator.parent.leftChild && iterator.rightChild == null){
+                iterator = iterator.parent;
+                return iterator.value;
+            } else if (iterator.parent != null && iterator == iterator.parent.leftChild && iterator.rightChild != null){
+                iterator = getFirstNode(iterator.rightChild);
+                return iterator.value;
+            }
             return null;
         }
     }
