@@ -34,6 +34,12 @@ public class TestMap {
         assertEquals("one", map.put(1, "two"));
         assertEquals(1, map.size());
     }
+    @Test
+    public void test_put_sameHash_key(){
+        assertNull(map.put(16, "one"));
+        assertNull(map.put(32, "one"));
+        assertEquals(2, map.size());
+    }
 
     @Test
     public void test_put_few_keys(){
