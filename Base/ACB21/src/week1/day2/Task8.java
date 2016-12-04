@@ -10,5 +10,15 @@ package week1.day2;
 public class Task8 {
     public static void main(String[] args) {
 
+        int a = 3;
+        int b = 5843;
+
+
+        int lastA = a % 10;
+        int lastB = b % 10;
+
+        System.out.println(lastA == lastB);
+
+
     }
 }
