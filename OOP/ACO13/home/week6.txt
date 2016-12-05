@@ -1,0 +1,52 @@
+Theory:
+
+ 1.	java.io.*;
+
+    	class File
+    	absolute and relative paths (differences)
+
+    	byte Stream (InputStream, OutputStream)
+
+    	char streams (Reader, Writer)
+
+    	!!! always close OutputStream and Writer
+
+2. Java collections
+		(xmind file, download and open)
+		https://drive.google.com/file/d/0B3pUqYFBBsi-a0s0UHp1S1dOc0k/view
+
+		http://www.quizful.net/post/Java-Collections
+		https://habrahabr.ru/post/237043/
+		https://habrahabr.ru/post/162017/
+
+2. https://www.codecademy.com/learn/learn-the-command-line
+
+3. https://www.codecademy.com/learn/learn-git
+
+
+
+Practice:
+
+
+1. Finish all methods and inner classes in binarySearchTree mark as TODO
+
+2. Make unit tests for BinarySearchTree
+
+3. Make refactoring if it possible for BinarySearchTree, check remove method
+
+4. Finish all previous tasks
+
+5.* Make BalancedBinaryTree, or try to write algorithm in mind map.
+
+6.* Implement class FileHelper
+       - find file(dir)
+       - show directoryContent
+       - show file (content)
+       - delete file or dir
+       - copy file(dir)
+       - move(rename) file or dir
+       - compare content of files
+       - deepFind (do search in file name and in file content by keyword)
+           * result of search can be written into file
+
+       -* find in file system without recursion
