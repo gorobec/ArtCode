@@ -62,9 +62,8 @@
 
 
 
-3. Do First all tasks from below links !!! You can use IDEA for better understanding
+3. Do all tasks from below links !!! You can use IDEA for better understanding
                	http://codingbat.com/java/Array-1
-               	http://codingbat.com/java/String-1
 
 	           (Как пользоваться сайтом
 	           			https://www.youtube.com/watch?v=cODLgsJMiMI&index=5&list=PLvf0crXC-YPoYF0wGTYL7OoF_OYd2LgVn )
@@ -125,7 +124,7 @@
 
 
 
-7. *
+7.
 
 	7.1 Инвертировать массив (без использования допольнительного массива)
 
@@ -142,13 +141,17 @@
 		Количество позиций и массив указывает пользователь
 
 
-8.*
+8.
     Do tasks from below links !!! You can use IDEA for better
 	        http://codingbat.com/java/Array-2
 	        http://codingbat.com/java/Array-3
 
 
-9.* Написать методы сортировки selectSort, insertSort.
+	        http://codingbat.com/java/Logic-1
+	        http://codingbat.com/java/Logic-2
+
+
+9. Написать методы сортировки selectSort, insertSort.
 
 10.*
         "Лотерея"
