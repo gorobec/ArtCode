@@ -94,12 +94,19 @@ public class ArrayUtils {
 
     private static int findMin(int[] array) {
 
-        if(array == null || array.length == 0) {
-            return -1;
-        }
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
             if(array[i] < min){
+                min = array[i];
+            }
+        }
+        return min;
+    }
+    private static String findMin(String[] array) {
+
+        String min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if(array[i].length() < min.length()){
                 min = array[i];
             }
         }
@@ -115,6 +122,15 @@ public class ArrayUtils {
         }
         return max;
     }
+    private static String findMax(String[] array) {
+        String max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if(array[i].length() > max.length()){
+                max = array[i];
+            }
+        }
+        return max;
+    }
 
     public static void printMinMax(int[] array) {
         if(array == null || array.length == 0) {
@@ -123,6 +139,17 @@ public class ArrayUtils {
         }
         int max = findMax(array);
         int min = findMin(array);
+        System.out.println("min - " + min + " max - " + max);
+
+    }
+
+    public static void printMinMax(String[] array) {
+        if(array == null || array.length == 0) {
+            System.err.println("Array is null or length == 0");
+            return;
+        }
+        String max = findMax(array);
+        String min = findMin(array);
         System.out.println("min - " + min + " max - " + max);
 
     }
@@ -200,4 +227,41 @@ public class ArrayUtils {
 
     }
 
+    public static void bubbleSort(String[] array){
+
+
+        for (int j = 0; j < array.length; j++) {
+            for (int i = 0; i < array.length - 1; i++) {
+                if(array[i].compareTo(array[i + 1]) > 0){
+                    String tmp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = tmp;
+                }
+            }
+        }
+
+    }
+
+    public static String censored(String[] words) {
+
+        String cut = "censored";
+
+        for (int i = 0; i < words.length; i++) {
+            if(words[i].equals("bjaka")){
+                words[i] = cut;
+            }
+        }
+
+        return makeString(words);
+
+    }
+
+    public static String makeString(String[] words) {
+//        todo check on null and length
+        StringBuilder text = new StringBuilder(words[0]);
+        for (int i = 1; i < words.length; i++) {
+            text.append(" ").append(words[i]);
+        }
+        return text.toString();
+    }
 }

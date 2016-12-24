@@ -9,7 +9,7 @@ http://docs.oracle.com/javase/7/docs/api/java/lang/String.html
 
 Практика:
 
-1. http://codingbat.com/java/String-1 первые 10 заданий.
+1. http://codingbat.com/java/String-1.
 
 
 2. Ввести предложение с консоли, найти самое короткое и самое длинное слово.
