@@ -1,0 +1,6 @@
+Student
+    name
+    age
+    phone
+
+Students?

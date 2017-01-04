@@ -27,7 +27,6 @@ public class LotteryUtilsTest {
 
                 Assert.assertTrue(result[i] != result[j]);
             }
-
         }
     }
 
