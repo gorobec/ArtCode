@@ -5,7 +5,26 @@ package final_task;
  */
 public class LotteryUtils {
     public static int[] generateSixNumbers(int from, int till) {
-        return new int[0];
+
+        int[] array = new int[6];
+
+        for (int i = 0; i < array.length; i++) {
+            int number;
+            while (true){
+                number = from + (int)(Math.random() * (till + 1 - from));
+                if(!contains(array, number)) break;
+            }
+            array[i] = number;
+        }
+        return array;
+    }
+
+    private static boolean contains(int[] array, int number) {
+
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] == number) return true;
+        }
+        return false;
     }
 
     public static int[] enterSixNumbers(int from, int till) {
