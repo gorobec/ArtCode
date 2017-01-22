@@ -15,7 +15,6 @@ public class IntroInReferen {
         Student stud2 = new Student("Yevhen", "Vorobiei", 27);
 
         Cat cat = new Cat("Vas'ka", 5);
-        stud2.cat = cat;
 
 
         System.out.println(stud2.asString());

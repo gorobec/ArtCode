@@ -1,4 +1,4 @@
-package week1.day1;
+package week1.week2.student_task;
 
 /**
  * Created by gorobec on 21.01.17.
@@ -8,9 +8,7 @@ public class Student {
     private String surname;
     private int age;
     private double averageMark;
-    private Cat cat;
 
-//    public Student(){}
 
     public Student(String name, String surname, int age){
         this.name = name;
@@ -52,16 +50,8 @@ public class Student {
         this.averageMark = averageMark;
     }
 
-    public Cat getCat() {
-        return cat;
-    }
-
-    public void setCat(Cat cat) {
-        this.cat = cat;
-    }
 
     public String asString(){
-//        return "Student name - " + name + ", age - " + age;
-        return String.format("Student name - %s, age - %d, cat - %s", name, age, cat.asString());
+        return String.format("Student name - %s, age - %d", name, age);
     }
 }
