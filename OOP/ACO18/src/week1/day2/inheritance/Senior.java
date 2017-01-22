@@ -1,4 +1,4 @@
-package week1.week2.inheritance;
+package week1.day2.inheritance;
 
 /**
  * Created by gorobec on 22.01.17.

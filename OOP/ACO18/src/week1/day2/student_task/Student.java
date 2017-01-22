@@ -1,4 +1,4 @@
-package week1.week2.student_task;
+package week1.day2.student_task;
 
 /**
  * Created by gorobec on 21.01.17.
