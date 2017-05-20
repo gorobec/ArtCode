@@ -37,7 +37,7 @@ public class Group {
         }
 
         for (int i = 0; i < size; i++) {
-            if(student.equalTo(students[i])) return false;
+            if(student.equals(students[i])) return false;
         }
         students[size++] = student;
         return true;
@@ -70,4 +70,5 @@ public class Group {
 
         return String.format("Group number - %d\nStudents:\n%s", groupNumber, info);
     }
+
 }

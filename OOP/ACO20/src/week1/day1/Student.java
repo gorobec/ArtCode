@@ -48,11 +48,27 @@ public class Student {
                 name, surName, age);
     }
 
-    public boolean equalTo(Student student) {
+    @Override
+    public boolean equals(Object student) {
         if(student == null) return false;
         if(student == this) return true;
-        if(this.name.equals(student.name) &&
-                this.surName.equals(student.surName)) return true;
+
+//        if(student.getClass() != Student.class) return false;
+        if(!(student instanceof Student))return false;
+
+        Student another = (Student) student;
+        if(this.name.equals(another.name) &&
+                this.surName.equals(another.surName)) return true;
         return false;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Student{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", surName='").append(surName).append('\'');
+        sb.append(", age=").append(age);
+        sb.append('}');
+        return sb.toString();
     }
 }

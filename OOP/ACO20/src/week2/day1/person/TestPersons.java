@@ -11,9 +11,8 @@ public class TestPersons {
         Person person4 = new Person("Bill", "Smith", "Middle", 42, 'M');*/
 
 
-        Person patient = new Patient("Bob", "Smith", "Senior", 62, 'M', "Health", 70, 180);
+        Patient patient = new Patient("Bob", "Smith", "Senior", 62, 'M', "Health", 70, 180);
         Person patient2 = new Patient("Jeremy", "Smith", "Senior", 48, 'M', "Ill", 73, 175);
-
         Nurse nurse = new Nurse("Mary", "Smith", "Middle", 25, 'W');
         MedPersonal assistant = new Assistant("John", "Smith", "Middle", 32, 'M');
 

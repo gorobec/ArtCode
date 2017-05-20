@@ -59,6 +59,7 @@ public abstract class Person {
         this.sex = sex;
     }
 
+    @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Person{");
         sb.append("name='").append(name).append('\'');
