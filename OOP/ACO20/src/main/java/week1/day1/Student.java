@@ -4,7 +4,7 @@ package week1.day1;
  * @author Yevhen Vorobiei
  * @since JDK 1.8
  */
-public class Student {
+public class Student implements Comparable<Student>{
 
     private String name;
     private String surName;
@@ -70,5 +70,17 @@ public class Student {
         sb.append(", age=").append(age);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public int compareTo(Student student) {
+
+
+        int compareToResult = this.name.compareTo(student.name);
+        if(compareToResult != 0) return compareToResult;
+        compareToResult = this.surName.compareTo(student.surName);
+        if(compareToResult != 0) return compareToResult;
+
+        return Integer.compare(this.age,student.age);
     }
 }

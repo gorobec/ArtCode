@@ -11,10 +11,10 @@ import java.util.Arrays;
 public class TestGroup {
     public static void main(String[] args) {
 
-        Student student1 = new Student("Maxim", "Muzichenko", 29);
+        Student student1 = new Student("Maxim", "Muzichenko1", 29);
         Student student4 = new Student("Maxim", "Muzichenko", 29);
-        Student student2 = new Student("Maxim2", "Muzichenko", 29);
-        Student student3 = new Student("Maxim3", "Muzichenko", 29);
+        Student student2 = new Student("Maxim", "Muzichenko", 30);
+        Student student3 = new Student("Maxim", "Muzichenko", 29);
 
         Student[] students = {student1, student2, student3};
 
@@ -22,8 +22,13 @@ public class TestGroup {
 
         Group group = new Group(20, 8);
         Group group2 = new Group(20, students);
-        System.out.println(group.addStudent(student1));
-        student1.equals("Hello");
+//        System.out.println(group.addStudent(student1));
+        System.out.println(group2);
+        group2.sort();
+//        Arrays.sort(students);
+
+
+        System.out.println(group2);
 
 
 //        System.out.println(group2.asString());
