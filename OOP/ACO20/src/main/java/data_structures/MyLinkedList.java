@@ -6,7 +6,7 @@ package data_structures;
 public class MyLinkedList implements MyList{
     @Override
     public boolean add(Object o) {
-        return false;
+        return true;
     }
 
     @Override
