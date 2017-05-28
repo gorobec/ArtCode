@@ -1,5 +1,7 @@
 package data_structures;
 
+import java.util.Iterator;
+
 /**
  * Created by gorobec on 21.05.17.
  */
@@ -94,5 +96,10 @@ public class MyArrayList implements MyList{
     @Override
     public boolean set(Object o, int index) {
         return false;
+    }
+
+    @Override
+    public Iterator iterator() {
+        return null;
     }
 }
