@@ -20,7 +20,7 @@ public class GroupTest {
         boolean expected = true;
         boolean actual = group.addStudent(student);
 
-        System.out.printf("Test %s result - %b, expected - %b,  actual - %b\n", "testAdd1", expected == actual, expected, actual);
+        System.out.printf("Test %s result - %b, expected - %b,  actual - %b\n", Thread.currentThread().getStackTrace()[1].getMethodName(), expected == actual, expected, actual);
 
     }
 
