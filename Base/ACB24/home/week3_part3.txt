@@ -1,0 +1,13 @@
+1. Do all from codingBat (http://codingbat.com/java):
+
+For each method write own unit tests (at least 3). Try to use JUnit
+
+    String - 1
+    String - 2
+    String - 3
+
+    Array - 1
+    Array - 2
+    Array - 3
+
+    Recursion - 1
