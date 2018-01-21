@@ -1,3 +1,5 @@
+package home_work;
+
 import java.util.Scanner;
 
 public class Game_01_homework {
