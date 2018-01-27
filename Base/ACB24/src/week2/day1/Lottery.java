@@ -11,7 +11,7 @@ public class Lottery {
         ShiftArray.printArray(numbers);
     }
 
-    private static int[] generateRandomNumbers(int size, int min, int max) {
+    public static int[] generateRandomNumbers(int size, int min, int max) {
         int[] array = new int[size];
 
         int counter = 0;
